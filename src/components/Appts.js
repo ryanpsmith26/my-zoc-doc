@@ -9,7 +9,7 @@ function Appts({ appts, getAppts }) {
 		getAppts();
 	}, []);
 
-	console.log('appts------>', appts);
+	// console.log('appts------>', appts);
 
 	return (
 		<div className="App">

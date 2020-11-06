@@ -9,12 +9,20 @@ function Doctors({ doctors, getDoctors }) {
 		getDoctors();
 	}, []);
 
-	console.log('docs------->', doctors);
+	// console.log('docs------->', doctors);
 
 	return (
 		<div className="App">
 			<header className="App-header">
 				<h1>Doctor List</h1>
+				<ul>
+					{/* fix key */}
+					{doctors.map((doc, i) => (
+						<li key={i}>
+							{doc.firstName} {doc.lastName}
+						</li>
+					))}
+				</ul>
 			</header>
 		</div>
 	);
